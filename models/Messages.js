@@ -11,12 +11,12 @@ Message.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    message_title: {
-      type: DataTypes.STRING,
+    text: {
+      type: DataTypes.text,
       allowNull: false,
     },
-    message_description: {
-      type: DataTypes.STRING,
+    created_on: {
+      type: DataTypes.timestamps,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -25,6 +25,13 @@ Message.init(
         key: 'id',
       },
     },
+    thread_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'thread',
+          key: 'id',
+        },
+      },
   },
   {
     sequelize,

@@ -11,33 +11,22 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    post_title: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    post_description: {
+    images: {
       type: DataTypes.STRING,
-    },
-    post_images: {
-      type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
     post_city: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        key: 'id',
-      },
-    },
-    product_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'product',
         key: 'id',
       },
     },
