@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Message extends Model {}
+class Product extends Model {}
 
-Message.init(
+Product.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,26 +11,21 @@ Message.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    text: {
-
-      type: DataTypes.TEXT,
-      allowNull: false,
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
-    created_on: {
-      type: DataTypes.TIME,
-
+    description: {
+        type: DataTypes.STRING,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
+    quantity: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
     },
-    thread_id: {
+    post_id: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'thread',
+          model: 'post',
           key: 'id',
         },
       },
@@ -40,8 +35,8 @@ Message.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'message',
+    modelName: 'product',
   }
 );
 
-module.exports = Message;
+module.exports = Product;
