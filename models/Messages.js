@@ -12,11 +12,13 @@ Message.init(
       autoIncrement: true,
     },
     text: {
-      type: DataTypes.text,
+
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     created_on: {
-      type: DataTypes.timestamps,
+      type: DataTypes.TIME,
+
     },
     user_id: {
       type: DataTypes.INTEGER,
