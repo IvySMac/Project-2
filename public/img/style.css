@@ -1,0 +1,118 @@
+
+header {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .image-header {
+    text-align: center;
+  }
+  
+  .image-header img {
+    width: 100%;
+    height: auto;
+  }
+  
+   /* womens header */
+  header1 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .image-header1 {
+    text-align: center;
+  }
+  
+  .image-header img1 {
+    width: 100%;
+    height: auto;
+  }
+  
+    
+  .productSectionWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+  }
+  
+  .productSectionWrapper .product-box {
+    flex: 27%;
+    /*min-width: 27%;*/
+  }
+
+   /* Boxes */
+  .product-box {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 150px
+  }
+  
+  .product-image {
+    margin-bottom: 10px;
+  }
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .product-description {
+    margin-bottom: 10px;
+  }
+  .product-price {
+    font-weight: bold;
+    color: blue; 
+  }
+  
+  
+   /* mens header */
+  header2 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .image-header2 {
+    text-align: center;
+  }
+  
+  .image-header img2 {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+   /* kids header */
+  header3 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .image-header3 {
+    text-align: center;
+  }
+  
+  .image-header img3 {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  /* footer */
+  .footer {
+    background-color: #678f78;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
