@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const session = require('express-session');
-const path = require('path');
 const handlebars = require('express-handlebars');
 const routes = require('./controllers');
 
