@@ -2,7 +2,7 @@ const User = require('./User');
 const Product = require('./Products');
 const Threads = require('./Threads');
 const Messages  = require('./Messages');
-const Post = require('./Post')
+const Post = require('./post')
 
 
 
