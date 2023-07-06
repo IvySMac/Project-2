@@ -1,0 +1,96 @@
+header {
+  margin: 0;
+  padding: 0;
+}
+
+
+.image-header {
+  text-align: center;
+}
+
+.image-header img {
+  width: 100%;
+  height: 100px;
+}
+
+
+.productSectionWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.productSectionWrapper .product-box {
+  flex: 27%;
+  /*min-width: 27%;*/
+}
+
+ /* Boxes */
+.product-box {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 450px;
+}
+
+.resize {
+    width: 300px;
+    height: 300px;
+}
+.product-image {
+  margin-bottom: 10px;
+}
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  margin-bottom: 10px;
+}
+.product-price {
+  font-weight: bold;
+  color: #b8a37e; 
+}
+
+
+/* footer */
+.footer {
+  background-color: #97b68c;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* chat box */
+.chat-messages {
+  padding: 10px;
+}
+
+.chat-input {
+  padding: 10px;
+  width: 250px;
+  background: #b8a37e;
+}
+
+.message-input {
+  width: 150px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.send-button {
+  padding: 5px 10px;
+}
