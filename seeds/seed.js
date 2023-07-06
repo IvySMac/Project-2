@@ -24,9 +24,8 @@
 
 // seedDatabase();
 
-const seedProducts = require('./product-seeds');
-
 const sequelize = require('../config/connection');
+const seedProducts = require('./product-seeds');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
