@@ -1,313 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>My Awesome App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <!-- <img src="img/example.png"> -->
+    <header class="image-header">
+        <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODgxODA2OTh8&ixlib=rb-4.0.3&q=80&w=400"/> 
+  </header>
 
-  <! hero header>
+   <header class="image-header">
+  women's
+        <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODgxODA2OTh8&ixlib=rb-4.0.3&q=80&w=400"/> 
+  </header>
+
+ <section class="productSectionWrapper">
+
+ <!!!!! box 1>
+ {{#each products}}
+  {{#if this.isMen}}
+  <div class="product-box">
+      <div class="product-image">
+    <img class="resize" src="img/{{this.imageSrc}}"/>
+    </div>
+  <h2 class="product-title">{{this.title}}</h2>
+  <p class="product-description">{{this.description}}</p>
+  <p class="product-price">{{this.price}}</p>
+    <div class="chat-container">
+    {{#each this.commentBox}}
+    {{#if this.text}}
+    <div class="comment">{{this.text}} by {{this.user}}</div>
+    {{/if}}
+    {{/each}}
+
+    <!-- do i need to keep? -->
+      <div class="chat-input">
+        <input type="text" class="message-input" placeholder="Type your message">
+        <button class="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+{{/each}}
+
+<header class="image-header">
+  men's
+        <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODgxODA2OTh8&ixlib=rb-4.0.3&q=80&w=400"/> 
+  </header>
+
+ <!-- put your men's #each section here -->
+
  <header class="image-header">
-    <img src="pexels-david-bartus-297933.jpg" alt="Header Image">
+  Kid's
+        <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODgxODA2OTh8&ixlib=rb-4.0.3&q=80&w=400"/> 
   </header>
 
+ <!-- put your kid's #each section here -->
 
-   <! womens header>
-   <header class="image-header1">
-    <img src="pexels-david-bartus-297933.jpg" alt="Header Image Womens">
-  </header>
+const messageInput = document.getElementById('message-input');
+const sendButton = document.getElementById('send-button');
+const chatMessages = document.getElementById('chat-messages');
 
- <section class="productSectionWrapper">
+const chatContainers = [...document.querySelectorAll('chat-container')].forEach(function(item) {
+  console.log(item.innerHTML);
+  item.addEventListener('click', function() {
+    console.log(item.innerHTML);
+  });
+});
+/*
+function sendMessage() {
+  const message = messageInput.value.trim();
+  if (message !== '') {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message');
+    messageElement.textContent = message;
+    chatMessages.appendChild(messageElement);
+    messageInput.value = '';
+  }
+}
 
- <! box 1>
-<div class="product-box">
-    <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-  
-   <! box 2>
-</div>
-<div class="product-box">
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
+sendButton.addEventListener('click', sendMessage);
 
- <! box 3>
-</div>
-<div class="product-box">
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
- <! box 4>
-<div class="product-box"> 
-  <div class="product-image">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
- <! box 5>
-<div class="product-box">
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 6>
-<div class="product-box">
-    <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 7>
-<div class="product-box">    
-   <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 8>
-<div class="product-box">    
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 9>
-<div class="product-box">    
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-</section>
-
-
-<! mens header>
- <header class="image-header2">
-    <img src="pexels-david-bartus-297933.jpg" alt="Header Image Mens">
-  </header>
-
-
- <section class="productSectionWrapper">
-
- <! box 10>
-<div class="product-box">
-    <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-  
-   <! box 11>
-</div>
-<div class="product-box">
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
- <! box 12>
-</div>
-<div class="product-box">
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
- <! box 13>
-<div class="product-box"> 
-  <div class="product-image">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
- <! box 14>
-<div class="product-box">
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 15>
-<div class="product-box">
-    <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 16>
-<div class="product-box">    
-   <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 17>
-<div class="product-box">    
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 18>
-<div class="product-box">    
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-</section>
-
-<! Kids header>
-<header class="image-header3">
-    <img src="pexels-david-bartus-297933.jpg" alt="Header Image Kids">
-  </header>
-
- <section class="productSectionWrapper">
-
- <! box 19>
-<div class="product-box">
-    <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-  
-   <! box 20>
-</div>
-<div class="product-box">
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
- <! box 21>
-</div>
-<div class="product-box">
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
- <! box 22>
-<div class="product-box"> 
-  <div class="product-image">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
- <!box 23>
-<div class="product-box">
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 24>
-<div class="product-box">
-    <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 25>
-<div class="product-box">    
-   <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 26>
-<div class="product-box">    
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-
-<! box 27>
-<div class="product-box">    
-  <div class="product-image3">
-   <img src="pic_trulli.jpg" alt="Italian Trulli">
-  </div>
-<h2 class="product-title">{{title}}</h2>
- <p class="product-description">{{description}}</p>
- <p class="product-price">{{price}}</p>
-</div>
-</section>
-
-<! footer>
- <footer class="footer">
-    <p> footer goes here</p>
-  </footer>
+messageInput.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    sendMessage();
+  }
+});*/
+</script>
+</html>
