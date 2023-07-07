@@ -2,12 +2,17 @@ const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/', withAuth, async (req, res)=>{
+router.get('/', withAuth,async (req, res)=>{
   try {
-    const userData = await User.findAll();
-
+    const userData = await User.findAll({
+      attributes: ['first_name','last_name','email']
+    });
+    
+    const users = userData.map((d)=>d.get({plain: true}))
+    console.log(users)
     res.json(userData);
-  }catch (error){
+    // render('homepage', users)
+  } catch (error){
     res.status(500).json(error);
   }
 })
