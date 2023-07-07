@@ -1,34 +1,55 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Messages } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const newProject = await Project.create({
+    const newMessage = await Messages.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newProject);
+    res.status(200).json(newMessage);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.delete('/:id', async (req, res) => {
-  try {
-    const projectData = await Project.destroy({
+router.put('/:id', (req, res) => {
+    
+  Messages.update(
+    {
+      text: req.body.text,
+    },
+    {
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+      },
+    }
+  )
+    .then((updatedProduct) => {
+      res.json(updatedProduct);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json(err);
+    });
+});
+
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const messageData = await Messages.destroy({
+      where: {
+        id: req.params.id,
       },
     });
 
-    if (!projectData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+    if (!messageData) {
+      res.status(404).json({ message: 'No message found with this id!' });
       return;
     }
 
-    res.status(200).json(projectData);
+    res.status(200).json(messageData);
   } catch (err) {
     res.status(500).json(err);
   }

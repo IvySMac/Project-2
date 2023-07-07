@@ -50,9 +50,9 @@ router.get("/", async (req, res) => {
     
     Product.update(
       {
-        name: req.body.name,
+        title: req.body.name,
         description: req.body.description,
-        quantity: req.body.quantity,
+        price: req.body.price,
       },
       {
         where: {

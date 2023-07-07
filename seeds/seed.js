@@ -28,6 +28,7 @@ const sequelize = require('../config/connection');
 const seedProducts = require('./product-seeds');
 const seedPosts = require('./post-seeds')
 const userData = require('./user-seeds')
+const seedMessages = require('./message-seeds')
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
@@ -41,6 +42,9 @@ const seedAll = async () => {
 
   await seedPosts();
   console.log('\n----- POSTS SEEDED -----\n');
+
+  await seedMessages();
+  console.log('\n----- MESSAGES SEEDED -----\n');
 
   process.exit(0);
 };
