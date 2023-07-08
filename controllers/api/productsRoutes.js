@@ -5,7 +5,7 @@ router.get("/", async (req, res) => {
   
     try {
       const productData = await Product.findAll({
-        attributes: ['name','description','quantity'],
+        attributes: ['title','description','price'],
       });
       
       const products = productData.map((data)=>data.get({plain:true}))
