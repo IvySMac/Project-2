@@ -1,4 +1,4 @@
-const { Messages } = require('../models');
+const { Message } = require('../models');
 
 const messageData = [
   {
@@ -11,6 +11,6 @@ const messageData = [
   },
 ];
 
-const seedMessages = () => Messages.bulkCreate(messageData);
+const seedMessages = () => Message.bulkCreate(messageData);
 
 module.exports = seedMessages;
