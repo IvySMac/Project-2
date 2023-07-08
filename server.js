@@ -19,7 +19,7 @@ layoutsDir: __dirname + '/views/layouts',
 }));
 app.use(express.static('public'))
 app.get('/', (req, res) => {
-//Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
+//Serves the body of the page aka "homepage.handlebars" to the container //aka "index.handlebars"
 res.render('homepage');
 });
 
