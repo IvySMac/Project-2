@@ -4,9 +4,9 @@ const messagesRoutes = require('./messagesRoutes');
 const productsRoutes =  require('./productsRoutes');
 const postRoutes = require('./postRoutes');
 
-router.use('/user', userRoutes);
-router.use('/message', messagesRoutes);
+router.use('/users', userRoutes);
+router.use('/messages', messagesRoutes);
 router.use('/products', productsRoutes);
-router.use('/post',postRoutes);
+router.use('/posts',postRoutes);
 
 module.exports = router;
