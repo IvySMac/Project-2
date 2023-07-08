@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 router.get('/', async (req, res)=>{
   try {
     const userData = await User.findAll({
-      attributes: ['first_name','last_name','email']
+      attributes: ['first_name','last_name','email'],
     });
     
     const users = userData.map((d)=>d.get({plain: true}))
@@ -20,9 +20,11 @@ router.get('/', async (req, res)=>{
 
 router.get('/:id',async (req, res)=>{
   try {
-    const userData = await User.findByPk(req.params.id);
+    const userData = await User.findByPk(req.params.id, {
+      attributes: {exclude: ['password','id']}
+    });
     const user = userData.get({plain:true})
-    user.password = ''
+    
     console.log(user)
     res.json(user);
     // render('homepage', users)
@@ -39,7 +41,7 @@ router.get('/:id',async (req, res)=>{
 // }
 
 
-router.post('/', withAuth,async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const userData = await User.create(req.body, {
       individualHooks: true,
