@@ -11,7 +11,7 @@ const productData = [
     id: 2,
     title: 'Running Sneakers',
     description: 'A cool pair of shoes. You can run REAL fast',
-    price: 50,
+    price: 100,
   },
 ];
 

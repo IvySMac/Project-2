@@ -2,7 +2,6 @@ const router = require('express').Router();
 const {Product} = require('../../models');
 
 router.get("/", async (req, res) => {
-  
     try {
       const productData = await Product.findAll({
         attributes: ['title','description','price'],
@@ -10,14 +9,14 @@ router.get("/", async (req, res) => {
       
       const products = productData.map((data)=>data.get({plain:true}))
       console.log(products);
-      res.status(200).render('homepage', products)
+      res.status(200).json(products)
+      // render('homepage', products)
     } catch (err) {
       res.status(500).json(err);
     }
 });
   
 router.get("/:id", async (req, res) => {
-
   try {
     const productData = await Product.findByPk(req.params.id, {
     });
@@ -28,6 +27,7 @@ router.get("/:id", async (req, res) => {
     }
 
     res.status(200).json(productData);
+    // render('homepage', products)
    } catch (err) {
     res.status(500).json(err);
   }
