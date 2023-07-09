@@ -16,6 +16,18 @@ router.post("/", async (req, res) => {
     });
 });
   
+finished_APIroutes
+router.put('/:id', (req, res) => {
+      Product.update(
+    {
+      title: req.body.title,
+      description: req.body.description,
+      price: req.body.price,
+    },
+    {
+      where: {
+        id: req.params.id,
+=======
 
   router.put('/:id', (req, res) => {
     
@@ -24,6 +36,7 @@ router.post("/", async (req, res) => {
         title: req.body.name,
         description: req.body.description,
         price: req.body.price,
+
       },
       {
         where: {
@@ -45,7 +58,6 @@ router.delete('/:id', async (req, res) => {
     const productData = await Product.destroy({
       where: {
         id: req.params.id,
-        // user_id: req.session.user_id,
       },
     });
   
