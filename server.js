@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
   res.render('main', {layout : 'index', products:fakeApi()});
 });
 
+
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -50,7 +51,7 @@ function fakeApi() {
     {
       isWomens: true,
       imageSrc: 'womens-green-sweater.jpg',
-      title: 'cool shirt',
+      title: 'sweater',
       description: 'has a tear.',
       price: '35',
       commentBox: [
@@ -172,7 +173,6 @@ function fakeApi() {
         }
     ]
   },
-  //1 mens
   {
     isMens: true,
     imageSrc: 'mens-black-shirt.jpg',
@@ -298,6 +298,7 @@ function fakeApi() {
         }
     ]
   },
+
   //1 kids
   {
     isKids: true,
@@ -343,7 +344,7 @@ function fakeApi() {
   //4
   {
     isKids: true,
-    imageSrc: 'mkids-plaid.jpg',
+    imageSrc: 'kids-plaid.jpg',
     title: 'cool shirt',
     description: 'has a tear.',
     price: '45',
