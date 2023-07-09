@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
-const bcrypt = require('bcrypt');
 
 router.post('/', async (req, res) => {
   try {
@@ -67,8 +66,4 @@ router.post('/logout', (req, res) => {
   }
 });
 
-
 module.exports = router;
-=======
-module.exports= router;
-
