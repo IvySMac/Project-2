@@ -14,6 +14,29 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.put('/:id', (req, res) => {
+    
+  Post.update(
+    {
+      name: req.body.name,
+      description: req.body.description,
+      quantity: req.body.quantity,
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  )
+    .then((updatedPost) => {
+      res.json(updatedPost);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json(err);
+    });
+});
+
 router.delete('/:id', async (req, res) => {
   try {
     const projectData = await Project.destroy({
