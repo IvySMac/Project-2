@@ -32,6 +32,15 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+
+router.put('/:id', (req, res) => {
+    
+  Post.update(
+    {
+      name: req.body.name,
+      description: req.body.description,
+      quantity: req.body.quantity,
+=======
 router.post("/", async (req, res) => {
   Message.create(req.body)
     .then((message) => {
@@ -52,6 +61,7 @@ router.put('/:id', (req, res) => {
   Message.update(
     {
       text: req.body.text,
+
     },
     {
       where: {
@@ -59,8 +69,13 @@ router.put('/:id', (req, res) => {
       },
     }
   )
+
+    .then((updatedPost) => {
+      res.json(updatedPost);
+=======
     .then((updatedProduct) => {
       res.json(updatedProduct);
+
     })
     .catch((err) => {
       console.log(err);
@@ -68,6 +83,8 @@ router.put('/:id', (req, res) => {
     });
 });
 
+
+=======
 
 router.delete('/:id', async (req, res) => {
   try {

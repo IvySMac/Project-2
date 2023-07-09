@@ -3,36 +3,6 @@ const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 const bcrypt = require('bcrypt');
 
-router.get('/', async (req, res)=>{
-  try {
-    const userData = await User.findAll({
-      attributes: ['first_name','last_name','email'],
-    });
-    
-    const users = userData.map((d)=>d.get({plain: true}))
-    console.log(users)
-    res.json(users);
-    // render('homepage', users)
-  } catch (error){
-    res.status(500).json(error);
-  }
-});
-
-router.get('/:id',async (req, res)=>{
-  try {
-    const userData = await User.findByPk(req.params.id, {
-      attributes: {exclude: ['password','id']}
-    });
-    const user = userData.get({plain:true})
-    
-    console.log(user)
-    res.json(user);
-    // render('homepage', users)
-  } catch (error){
-    res.status(500).json(error);
-  }
-})
-
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body, {
@@ -60,6 +30,8 @@ router.post('/login', async (req, res) => {
         .status(400)
         .json({ message: 'Incorrect email or password, please try again' });
       return;
+    } else {
+      console.log('email successfully recorded')
     }
 
     const validPassword = await userData.checkPassword(req.body.password);
@@ -69,6 +41,8 @@ router.post('/login', async (req, res) => {
         .status(400)
         .json({ message: 'Incorrect email or password, please try again' });
       return;
+    } else {
+      console.log('password successfully recorded')
     }
 
     req.session.save(() => {
@@ -93,4 +67,8 @@ router.post('/logout', (req, res) => {
   }
 });
 
+
+module.exports = router;
+=======
 module.exports= router;
+
