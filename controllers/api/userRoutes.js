@@ -33,21 +33,13 @@ router.get('/:id',async (req, res)=>{
   }
 })
 
-// beforeFind: async (findUserData) => {
-//   if (findUserData.password) {
-//     findUserData.password = await bcrypt.hash(findUserData.password, 10);
-//   }
-//   return findUserData;
-// }
-
-
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body, {
       individualHooks: true,
     });
-
-    console.log(userData)
+    const user = userData.get({plain:true})
+    console.log(user)
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
