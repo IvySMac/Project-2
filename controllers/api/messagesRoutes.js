@@ -21,18 +21,31 @@ router.get("/:id", async (req, res) => {
     });
   
     if (!messageData) {
-      res.status(404).json({ message: "No product found with that id!" });
+      res.status(404).json({ message: "No message found with that id!" });
       return;
     }
 
     res.status(200).json(messageData);
-    // render('homepage', products)
    } catch (err) {
     res.status(500).json(err);
   }
 });
 
-
+router.post("/", async (req, res) => {
+  Message.create(req.body)
+    .then((product) => {
+      res.status(200).json(product);
+      console.log("session creation success");
+    })
+    .then((productIds) => {
+      res.status(200).json(productIds);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(400).json(err);
+    });
+});
+  
 
 router.put('/:id', (req, res) => {
     
