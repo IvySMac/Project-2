@@ -15,17 +15,17 @@
 
    <header class="image-header">
   women's
-        <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODgxODA2OTh8&ixlib=rb-4.0.3&q=80&w=400"/> 
+        <img src="womens-header.jpg"/> 
   </header>
 
  <section class="productSectionWrapper">
 
- <!!!!! box 1>
+ <!--!!!! box 1-->
  {{#each products}}
-  {{#if this.isMen}}
+ {{#if this.isWomens}}
   <div class="product-box">
       <div class="product-image">
-    <img class="resize" src="img/{{this.imageSrc}}"/>
+     <img class="resize" src="img/{{this.imageSrc}}"/>
     </div>
   <h2 class="product-title">{{this.title}}</h2>
   <p class="product-description">{{this.description}}</p>
@@ -37,7 +37,7 @@
     {{/if}}
     {{/each}}
 
-    <!-- do i need to keep? -->
+
       <div class="chat-input">
         <input type="text" class="message-input" placeholder="Type your message">
         <button class="send-button">Send</button>
@@ -45,51 +45,82 @@
     </div>
   </div>
   {{/if}}
-{{/each}}
-
-<header class="image-header">
-  men's
-        <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODgxODA2OTh8&ixlib=rb-4.0.3&q=80&w=400"/> 
-  </header>
-
- <!-- put your men's #each section here -->
+  {{/each}}
+ </section>
 
  <header class="image-header">
-  Kid's
-        <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODgxODA2OTh8&ixlib=rb-4.0.3&q=80&w=400"/> 
+  men's
+        <img src="mens-header.jpg"/> 
   </header>
 
- <!-- put your kid's #each section here -->
+ <section class="productSectionWrapper">
 
-const messageInput = document.getElementById('message-input');
-const sendButton = document.getElementById('send-button');
-const chatMessages = document.getElementById('chat-messages');
+ {{#each products}}
+ {{#if this.isMens}}
+  <div class="product-box">
+      <div class="product-image">
+     <img class="resize" src="img/{{this.imageSrc}}"/>
+    </div>
+  <h2 class="product-title">{{this.title}}</h2>
+  <p class="product-description">{{this.description}}</p>
+  <p class="product-price">{{this.price}}</p>
+    <div class="chat-container">
+    {{#each this.commentBox}}
+    {{#if this.text}}
+    <div class="comment">{{this.text}} by {{this.user}}</div>
+    {{/if}}
+    {{/each}}
 
-const chatContainers = [...document.querySelectorAll('chat-container')].forEach(function(item) {
-  console.log(item.innerHTML);
-  item.addEventListener('click', function() {
-    console.log(item.innerHTML);
-  });
-});
-/*
-function sendMessage() {
-  const message = messageInput.value.trim();
-  if (message !== '') {
-    const messageElement = document.createElement('div');
-    messageElement.classList.add('message');
-    messageElement.textContent = message;
-    chatMessages.appendChild(messageElement);
-    messageInput.value = '';
-  }
-}
 
-sendButton.addEventListener('click', sendMessage);
+      <div class="chat-input">
+        <input type="text" class="message-input" placeholder="Type your message">
+        <button class="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+ {{/if}}
+ {{/each}}
+ </section>
 
-messageInput.addEventListener('keydown', function (event) {
-  if (event.key === 'Enter') {
-    event.preventDefault();
-    sendMessage();
-  }
-});*/
+
+  <header class="image-header">
+   Kid's
+        <img src="kids-header.jpg"/> 
+  </header>
+
+ <section class="productSectionWrapper">
+
+   {{#each products}}
+   {{#if this.isKids}}
+   <div class="product-box">
+      <div class="product-image">
+     <img class="resize" src="img/{{this.imageSrc}}"/>
+    </div>
+   <h2 class="product-title">{{this.title}}</h2>
+   <p class="product-description">{{this.description}}</p>
+   <p class="product-price">{{this.price}}</p>
+    <div class="chat-container">
+    {{#each this.commentBox}}
+    {{#if this.text}}
+    <div class="comment">{{this.text}} by {{this.user}}</div>
+    {{/if}}
+    {{/each}}
+
+
+      <div class="chat-input">
+        <input type="text" class="message-input" placeholder="Type your message">
+        <button class="send-button">Send</button>
+      </div>
+    </div>
+   </div>
+   {{/if}}
+   {{/each}}
+ </section>
+
+ <footer class="footer">
+    <p> footer goes here</p>
+  </footer>
+ 
+
 </script>
 </html>

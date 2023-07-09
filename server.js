@@ -42,13 +42,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Now listening to 3001'));
 });
 
 function fakeApi() {
   return [
     {
-      isMen: true,
+      isWomens: true,
       imageSrc: 'womens-green-sweater.jpg',
       title: 'cool shirt',
       description: 'has a tear.',
@@ -62,8 +62,9 @@ function fakeApi() {
     },
   //2
   {
-      imageSrc: 'womens-white-pants.jpg',
-      title: 'cool shirt',
+    isWomens: true,
+    imageSrc: 'womens-white-pants.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
     price: '45',
     commentBox: [
@@ -71,15 +72,15 @@ function fakeApi() {
           text: 'looks great, still available?',
           user: 'coolbro00'
         }
-    ],
-    isMen: true
+    ]
   },
   //3
   {
-      imageSrc: 'womens-pink-sweater.jpg',
-      title: 'cool shirt',
+    isWomens: true,
+    imageSrc: 'womens-pink-sweater.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -89,10 +90,11 @@ function fakeApi() {
   },
   //4
   {
-      imageSrc: 'womens-pink-shirt.jpg',
-      title: 'cool shirt',
+    isWomens: true,
+    imageSrc: 'womens-pink-shirt.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -102,10 +104,11 @@ function fakeApi() {
   },
   //5
   {
-      imageSrc: 'womens-pink-shoes.jpg',
-      title: 'cool shirt',
+    isWomens: true,
+    imageSrc: 'womens-pink-shoes.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -115,10 +118,11 @@ function fakeApi() {
   },
   //6
   {
-      imageSrc: 'womens-tan-jacket.jpg',
-      title: 'cool shirt',
+    isWomens: true,
+    imageSrc: 'womens-tan-jacket.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -128,10 +132,11 @@ function fakeApi() {
   },
   //7
   {
-      imageSrc: 'womens-green-dress.jpg',
-      title: 'cool shirt',
+    isWomens: true,
+    imageSrc: 'womens-green-dress.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -141,10 +146,11 @@ function fakeApi() {
   },
   //8
   {
-      imageSrc: 'womens-grey-vest.jpg',
-      title: 'cool shirt',
+    isWomens: true,
+    imageSrc: 'womens-grey-vest.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -154,26 +160,25 @@ function fakeApi() {
   }, 
   //9
   {
-      imageSrc: 'womens-tan.jpg',
-      title: 'cool shirt',
+    isWomens: true,
+    imageSrc: 'womens-tan.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
           user: 'coolbro00'
         }
     ]
-  },  comma or no?
-
-
-
+  },
   //1 mens
   {
-      imageSrc: 'mens-black-shirt.jpg',
-      title: 'cool shirt',
+    isMens: true,
+    imageSrc: 'mens-black-shirt.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -183,10 +188,11 @@ function fakeApi() {
   },
   //2
   {
-      imageSrc: 'mens-orange-jacket.jpg',
-      title: 'cool shirt',
+    isMens: true,
+    imageSrc: 'mens-orange-jacket.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -196,10 +202,11 @@ function fakeApi() {
   },
   //3
   {
-      imageSrc: 'mens-black-shoes.jpg',
-      title: 'cool shirt',
+    isMens: true,
+    imageSrc: 'mens-black-shoes.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -209,10 +216,11 @@ function fakeApi() {
   },
   //4
   {
-      imageSrc: 'mens-jean-jacket.jpg',
-      title: 'cool shirt',
+    isMens: true,
+    imageSrc: 'mens-jean-jacket.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -222,10 +230,11 @@ function fakeApi() {
   },
   //5
   {
-      imageSrc: 'mens-white-shirt.jpg',
-      title: 'cool shirt',
+    isMens: true,
+    imageSrc: 'mens-white-shirt.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -235,10 +244,11 @@ function fakeApi() {
   },
   //6
   {
-      imageSrc: 'mens-green-shirt.jpg',
-      title: 'cool shirt',
+    isMens: true,
+    imageSrc: 'mens-green-shirt.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -248,10 +258,11 @@ function fakeApi() {
   },
   //7
   {
-      imageSrc: 'mens-white-shoes.jpg',
-      title: 'cool shirt',
+    isMens: true,
+    imageSrc: 'mens-white-shoes.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -260,11 +271,26 @@ function fakeApi() {
     ]
   },
   //8
-  {
+    {
+      isMens: true,
       imageSrc: 'mens-jeanshorts.jpg',
       title: 'cool shirt',
+      description: 'has a tear.',
+      price: '45',
+      commentBox: [
+        {
+            text: 'looks great, still available?',
+            user: 'coolbro00'
+          }
+      ]
+    },
+  //9
+  {
+    isMens: true,
+    imageSrc: 'mens-blue-shoes.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -272,26 +298,13 @@ function fakeApi() {
         }
     ]
   },
-  //9
-  {
-      imageSrc: 'mens-blue-shoes.jpg',
-      title: 'cool shirt',
-    description: 'has a tear.',
-    price: '45'
-    commentBox: [
-      {
-          text: 'looks great, still available?',
-          user: 'coolbro00'
-        }
-    ]
-  }, comma or no?
-
   //1 kids
   {
-      imageSrc: 'kids-orange.jpg',
-      title: 'cool shirt',
+    isKids: true,
+    imageSrc: 'kids-orange.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -301,10 +314,11 @@ function fakeApi() {
   },
   //2
   {
-      imageSrc: 'kids-orange.jpg',
-      title: 'cool shirt',
+    isKids: true,
+    imageSrc: 'kids-shorts.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -314,10 +328,11 @@ function fakeApi() {
   },
   //3
   {
-      imageSrc: 'kids-tan.jpg',
-      title: 'cool shirt',
+    isKids: true,
+    imageSrc: 'kids-tan.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -327,10 +342,11 @@ function fakeApi() {
   },
   //4
   {
-      imageSrc: 'kids-plaid.jpg',
-      title: 'cool shirt',
+    isKids: true,
+    imageSrc: 'mkids-plaid.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -339,24 +355,26 @@ function fakeApi() {
     ]
   },
   //5
-  {
+    {
+      isKids: true,
       imageSrc: 'kids-swimsuit.jpg',
       title: 'cool shirt',
-    description: 'has a tear.',
-    price: '45'
-    commentBox: [
-      {
-          text: 'looks great, still available?',
-          user: 'coolbro00'
-        }
-    ]
-  },
+      description: 'has a tear.',
+      price: '45',
+      commentBox: [
+        {
+            text: 'looks great, still available?',
+            user: 'coolbro00'
+          }
+      ]
+    },
   //6
   {
-      imageSrc: 'kids-flipflopki.jpg',
-      title: 'cool shirt',
+    isKids: true,
+    imageSrc: 'kids-flipflop.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -366,10 +384,11 @@ function fakeApi() {
   },
   //7
   {
-      imageSrc: 'kids-onsie.jpg',
-      title: 'cool shirt',
+    isKids: true,
+    imageSrc: 'kids-onsie.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -379,10 +398,11 @@ function fakeApi() {
   },
   //8
   {
-      imageSrc: 'kids-pink-shoes.jpg',
-      title: 'cool shirt',
+    isKids: true,
+    imageSrc: 'kids-pink-shoes.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',
@@ -392,10 +412,11 @@ function fakeApi() {
   },
   //9
   {
-      imageSrc: 'kids-green-shoes..jpg',
-      title: 'cool shirt',
+    isKids: true,
+    imageSrc: 'kids-green-shoes.jpg',
+    title: 'cool shirt',
     description: 'has a tear.',
-    price: '45'
+    price: '45',
     commentBox: [
       {
           text: 'looks great, still available?',

@@ -35,7 +35,7 @@ header {
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
-  height: 450px;
+  height: 500px;
 }
 
 .resize {
@@ -47,7 +47,7 @@ header {
 }
 .product-image img {
   max-width: 100%;
-  height: auto;
+  height: 250px;
 }
 
 .product-title {
@@ -94,3 +94,11 @@ header {
 .send-button {
   padding: 5px 10px;
 }
+
+.footer {
+  background-color: #97b68c;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
