@@ -2,22 +2,28 @@ const router = require('express').Router();
 const {Post} = require('../../models');
 
   router.post("/", async (req, res) => {
-    try {
-      const postData = Post.create(req.body);
-
-      res.status(200).json(postData);
-    } catch (error) {
-      res.status(500).json({"error message": error});
-    }
+    Post.create(req.body)
+    .then((post) => {
+      res.status(200).json(post);
+      console.log("session creation success");
+    })
+    .then((postIds) => {
+      res.status(200).json(postIds);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(400).json(err);
+    });
   });
+  
 
   router.put('/:id', (req, res) => {
+    
     Post.update(
       {
         title: req.body.title,
-        description: req.body.description,
         images: req.body.images,
-        post_city:req.body.post_city
+        post_city: req.body.post_city,
       },
       {
         where: {
