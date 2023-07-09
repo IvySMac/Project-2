@@ -1,16 +1,32 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
+const bcrypt = require('bcrypt');
 
-router.get('/', withAuth,async (req, res)=>{
+router.get('/', async (req, res)=>{
   try {
     const userData = await User.findAll({
-      attributes: ['first_name','last_name','email']
+      attributes: ['first_name','last_name','email'],
     });
     
     const users = userData.map((d)=>d.get({plain: true}))
     console.log(users)
-    res.json(userData);
+    res.json(users);
+    // render('homepage', users)
+  } catch (error){
+    res.status(500).json(error);
+  }
+});
+
+router.get('/:id',async (req, res)=>{
+  try {
+    const userData = await User.findByPk(req.params.id, {
+      attributes: {exclude: ['password','id']}
+    });
+    const user = userData.get({plain:true})
+    
+    console.log(user)
+    res.json(user);
     // render('homepage', users)
   } catch (error){
     res.status(500).json(error);
@@ -19,8 +35,11 @@ router.get('/', withAuth,async (req, res)=>{
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
-
+    const userData = await User.create(req.body, {
+      individualHooks: true,
+    });
+    const user = userData.get({plain:true})
+    console.log(user)
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
