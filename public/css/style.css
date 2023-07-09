@@ -115,4 +115,18 @@ header {
     text-align: center;
     padding: 20px;
   }
+  .search-container {
+    text-align: center;
+    margin-top: 20px;
+  }
   
+  /* Style the search input */
+  #searchInput {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  /* Style the search button */
+  button {
+    padding: 8px 15px;
+    font-size: 16px;};
