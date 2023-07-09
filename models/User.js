@@ -55,7 +55,7 @@ User.init(
           findUserData.password = await bcrypt.hash(findUserData.password, 10);
         }
         return findUserData;
-      }
+      },
     },
     sequelize,
     timestamps: false,
