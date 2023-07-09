@@ -4,6 +4,7 @@ const Thread = require('./Threads');
 const Message  = require('./Messages');
 const Post = require('./post');
 
+
 User.hasMany(Post, {
     foreignKey: 'user_id'
 });

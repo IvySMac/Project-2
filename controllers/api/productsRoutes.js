@@ -16,29 +16,26 @@ router.post("/", async (req, res) => {
     });
 });
   
-
-  router.put('/:id', (req, res) => {
-    
-    Product.update(
-      {
-        title: req.body.name,
-        description: req.body.description,
-        price: req.body.price,
+router.put('/:id', (req, res) => {
+      Product.update(
+    {
+      title: req.body.title,
+      description: req.body.description,
+      price: req.body.price,
+    },
+    {
+      where: {
+        id: req.params.id,
       },
-      {
-        where: {
-          id: req.params.id,
-        },
-      }
-    )
-      .then((updatedProduct) => {
-        res.json(updatedProduct);
-      })
-      .catch((err) => {
-        console.log(err);
-        res.json(err);
-      });
-  });
+    })
+    .then((updatedProduct) => {
+      res.json(updatedProduct);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json(err);
+    });
+});
 
 router.delete('/:id', async (req, res) => {
   try {
