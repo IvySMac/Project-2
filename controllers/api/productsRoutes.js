@@ -16,13 +16,12 @@ router.post("/", async (req, res) => {
     });
 });
   
-
 router.put('/:id', (req, res) => {
       Product.update(
     {
-      name: req.body.name,
+      title: req.body.title,
       description: req.body.description,
-      quantity: req.body.quantity,
+      price: req.body.price,
     },
     {
       where: {
@@ -43,7 +42,6 @@ router.delete('/:id', async (req, res) => {
     const productData = await Product.destroy({
       where: {
         id: req.params.id,
-        // user_id: req.session.user_id,
       },
     });
   

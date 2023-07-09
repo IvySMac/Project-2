@@ -12,7 +12,6 @@ Message.init(
       autoIncrement: true,
     },
     text: {
-
       type: DataTypes.TEXT,
       allowNull: false,
     },
