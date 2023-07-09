@@ -11,16 +11,16 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-//Sets our app to use the handlebars engine
 app.set('view engine', 'handlebars');
-//Sets handlebars configurations (we will go through them later on)
-app.engine('handlebars', handlebars({
-layoutsDir: __dirname + '/views/layouts',
-}));
-app.use(express.static('public'))
+app.engine(
+  'handlebars',
+  handlebars({
+    layoutsDir: __dirname + '/views/layouts',
+  })
+);
+app.use(express.static('public'));
 app.get('/', (req, res) => {
-//Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
-res.render('homepage');
+  res.render('homepage');
 });
 
 const sess = {
@@ -29,8 +29,8 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
