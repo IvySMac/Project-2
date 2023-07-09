@@ -4,7 +4,4 @@ const Threads = require('./Threads');
 const Message  = require('./Messages');
 const Post = require('./post')
 
-
-
-
-module.exports = { User, Product, Message, Threads, Post };
+module.exports = { User, Product, Messages, Threads, Post };
