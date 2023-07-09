@@ -15,9 +15,14 @@ const {Post} = require('../../models');
     Post.update(
       {
         title: req.body.title,
+finished_APIroutes
         description: req.body.description,
         images: req.body.images,
         post_city:req.body.post_city
+=======
+        images: req.body.images,
+        post_city: req.body.post_city,
+
       },
       {
         where: {

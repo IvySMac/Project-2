@@ -16,6 +16,7 @@ router.post("/", async (req, res) => {
     });
 });
   
+finished_APIroutes
 router.put('/:id', (req, res) => {
       Product.update(
     {
@@ -26,16 +27,31 @@ router.put('/:id', (req, res) => {
     {
       where: {
         id: req.params.id,
+=======
+
+  router.put('/:id', (req, res) => {
+    
+    Product.update(
+      {
+        title: req.body.name,
+        description: req.body.description,
+        price: req.body.price,
+
       },
-    })
-    .then((updatedProduct) => {
-      res.json(updatedProduct);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.json(err);
-    });
-});
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    )
+      .then((updatedProduct) => {
+        res.json(updatedProduct);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.json(err);
+      });
+  });
 
 router.delete('/:id', async (req, res) => {
   try {
