@@ -21,9 +21,9 @@ const {Post} = require('../../models');
     
     Post.update(
       {
-        name: req.body.name,
-        description: req.body.description,
-        quantity: req.body.quantity,
+        title: req.body.title,
+        images: req.body.images,
+        post_city: req.body.post_city,
       },
       {
         where: {
