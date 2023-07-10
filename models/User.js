@@ -46,6 +46,12 @@ User.init(
         updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
         return updatedUserData;
       },
+      beforeFind: async (findUserData) => {
+        if (findUserData.password) {
+          findUserData.password = await bcrypt.hash(findUserData.password, 10);
+        }
+        return findUserData;
+      },
     },
     sequelize,
     timestamps: false,

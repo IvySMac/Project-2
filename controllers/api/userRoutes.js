@@ -1,10 +1,14 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
-
+    const userData = await User.create(req.body, {
+      individualHooks: true,
+    });
+    const user = userData.get({plain:true})
+    console.log(user)
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
@@ -25,6 +29,8 @@ router.post('/login', async (req, res) => {
         .status(400)
         .json({ message: 'Incorrect email or password, please try again' });
       return;
+    } else {
+      console.log('email successfully recorded')
     }
 
     const validPassword = await userData.checkPassword(req.body.password);
@@ -34,6 +40,8 @@ router.post('/login', async (req, res) => {
         .status(400)
         .json({ message: 'Incorrect email or password, please try again' });
       return;
+    } else {
+      console.log('password successfully recorded')
     }
 
     req.session.save(() => {
@@ -59,3 +67,6 @@ router.post('/logout', (req, res) => {
 });
 
 module.exports = router;
+
+
+
