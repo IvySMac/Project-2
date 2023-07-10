@@ -11,7 +11,7 @@ router.get('/', withAuth, async (req,res) => {
         const posts = postData.map((data) => data.get({plain: true}));
         console.log(posts)
         res.render('homepage', {
-            posts,
+            products:fakeApi(),
             logged_in: req.session.logged_in,
         });
     } catch (err) {
@@ -29,3 +29,4 @@ router.get('/login', (req, res) => {
 });
   
 module.exports = router;
+
