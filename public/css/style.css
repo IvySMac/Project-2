@@ -52,6 +52,11 @@ header {
     margin-bottom: 10px;
     height: 150px
   }
+
+.resize {
+    width: 300px;
+    height: 300px;
+}
   
   .product-image {
     margin-bottom: 10px;
@@ -106,6 +111,28 @@ header {
     width: 100%;
     height: auto;
   }
+
+.chat-messages {
+  margin-top: 0px;
+  padding: 10px;
+
+}
+
+.chat-input {
+  padding: 10px;
+  width: 250px;
+  background: #b8a37e;
+}
+
+.message-input {
+  width: 150px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.send-button {
+  padding: 5px 10px;
+}
   
   
   /* footer */
