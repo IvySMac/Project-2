@@ -98,9 +98,8 @@ header {
   }
 
 .chat-messages {
-  margin-top: 0px;
   padding: 10px;
-
+  margin: 5px 0;
 }
 
 .chat-input {
