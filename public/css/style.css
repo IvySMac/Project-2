@@ -50,20 +50,20 @@ header {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
-    height: 150px
+    height: 600px
   }
 
-.resize {
+  .resize {
     width: 300px;
     height: 300px;
-}
+  }
   
   .product-image {
     margin-bottom: 10px;
   }
   .product-image img {
     max-width: 100%;
-    height: auto;
+    height: 300px;
   }
   
   .product-title {

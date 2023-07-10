@@ -6,6 +6,26 @@
     <title>Nifty Thrifty</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      .search-bar {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+        
+      .search-bar input[type="text"] {
+          padding: 8px;
+          width: 200px;
+      }
+        
+      .search-bar button {
+          padding: px 12px;
+          background-color: #066e35;
+          color: white;
+          border: none;
+          cursor: pointer;
+      }
+    </style>
   </head>
   <header>
     <nav>
@@ -17,6 +37,11 @@
       <a href="/login">login</a>
       {{/if}}
     </nav>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+    </div>
   </header>
   <body>
     {{{body}}}
@@ -24,36 +49,14 @@
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
+  </head>
+</html>
 
-    <head>
-    <style>
-        .search-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .search-bar input[type="text"] {
-            padding: 8px;
-            width: 200px;
-        }
-        
-        .search-bar button {
-            padding: px 12px;
-            background-color: #066e35;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
-</head>
+
+{{!-- 
 <body>
-    <div class="search-bar">
-        <input type="text" placeholder="Search...">
-        <button type="submit">Search</button>
-    </div>
-  </header>
-   <header class="image-header">
+    
+  <header class="image-header">
     <img src="womens-header.jpg"/>   
   </header>
 
@@ -85,17 +88,17 @@
   </div>
   {{/if}}
   {{/each}}
- </section>
-
- <header class="image-header">
+  </section>
+  
+  <header class="image-header">
     <img src="mens-header.jpg"/> 
   </header>
+  
+  <section class="productSectionWrapper">
 
- <section class="productSectionWrapper">
-
- {{#each products}}
- {{#if this.isMens}}
-  <div class="product-box">
+  {{#each products}}
+  {{#if this.isMens}}
+    <div class="product-box">
       <div class="product-image">
      <img class="resize" src="img/{{this.imageSrc}}"/>
     </div>
@@ -152,14 +155,5 @@
    </div>
    {{/if}}
    {{/each}}
-</section>
-
- <footer class="footer">
-    <p> footer goes here</p>
-  </footer>
-
-
-</script>
-  </body>
-    
-</html>
+  </section>
+</body> --}}
