@@ -9,12 +9,12 @@ cloudinary.config({
 
 
 
-//single image upload
+// single image upload
 
 // const image = "./public/img/sweater.jpg";
 // (async function run(){
 //     const result =  await cloudinary.uploader.upload(image)
-//     console.log(result);
+//     console.log(result.url);
 //   })();
 
 
@@ -28,7 +28,7 @@ cloudinary.config({
 // const upload = async() => {
 // for (const image of images){
 //     const result =await cloudinary.uploader.upload(image);
-//     console.log(result);
+//     console.log(result.url);
 // }
 // };
 
