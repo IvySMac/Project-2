@@ -52,5 +52,114 @@
         <input type="text" placeholder="Search...">
         <button type="submit">Search</button>
     </div>
+  </header>
+   <header class="image-header">
+    <img src="womens-header.jpg"/>   
+  </header>
+
+ <section class="productSectionWrapper">
+
+ <!--!!!! box 1-->
+ {{#each products}}
+ {{#if this.isWomens}}
+  <div class="product-box">
+      <div class="product-image">
+     <img class="resize" src="img/{{this.imageSrc}}"/>
+    </div>
+  <h2 class="product-title">{{this.title}}</h2>
+  <p class="product-description">{{this.description}}</p>
+  <p class="product-price">{{this.price}}</p>
+    <div class="chat-container">
+    {{#each this.commentBox}}
+    {{#if this.text}}
+    <div class="comment">{{this.text}} by {{this.user}}</div>
+    {{/if}}
+    {{/each}}
+
+
+      <div class="chat-input">
+        <input type="text" class="message-input" placeholder="Type your message">
+        <button class="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{/each}}
+ </section>
+
+ <header class="image-header">
+    <img src="mens-header.jpg"/> 
+  </header>
+
+ <section class="productSectionWrapper">
+
+ {{#each products}}
+ {{#if this.isMens}}
+  <div class="product-box">
+      <div class="product-image">
+     <img class="resize" src="img/{{this.imageSrc}}"/>
+    </div>
+  <h2 class="product-title">{{this.title}}</h2>
+  <p class="product-description">{{this.description}}</p>
+  <p class="product-price">{{this.price}}</p>
+    <div class="chat-container">
+    {{#each this.commentBox}}
+    {{#if this.text}}
+    <div class="comment">{{this.text}} by {{this.user}}</div>
+    {{/if}}
+    {{/each}}
+
+
+      <div class="chat-input">
+        <input type="text" class="message-input" placeholder="Type your message">
+        <button class="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+ {{/if}}
+ {{/each}}
+ </section>
+
+
+  <header class="image-header">
+     <img src="kids-header.jpg"/> 
+  </header>
+
+ <section class="productSectionWrapper">
+
+   {{#each products}}
+   {{#if this.isKids}}
+   <div class="product-box">
+      <div class="product-image">
+     <img class="resize" src="img/{{this.imageSrc}}"/>
+    </div>
+   <h2 class="product-title">{{this.title}}</h2>
+   <p class="product-description">{{this.description}}</p>
+   <p class="product-price">{{this.price}}</p>
+    <div class="chat-container">
+    {{#each this.commentBox}}
+    {{#if this.text}}
+    <div class="comment">{{this.text}} by {{this.user}}</div>
+    {{/if}}
+    {{/each}}
+
+
+      <div class="chat-input">
+        <input type="text" class="message-input" placeholder="Type your message">
+        <button class="send-button">Send</button>
+      </div>
+    </div>
+   </div>
+   {{/if}}
+   {{/each}}
+</section>
+
+ <footer class="footer">
+    <p> footer goes here</p>
+  </footer>
+
+
+</script>
   </body>
+    
 </html>
