@@ -39,8 +39,8 @@ function fakeApi() {
         price: '25',
         commentBox: [
           {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Looks great, still available?',
+            user: 'Sasha02'
           }
         ]
       },
@@ -53,8 +53,8 @@ function fakeApi() {
       price: '45',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'So cute! Would you take 35?',
+            user: 'Julio00'
           }
       ]
     },
@@ -67,8 +67,8 @@ function fakeApi() {
       price: '35',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Is this still available?',
+            user: 'TS1989'
           }
       ]
     },
@@ -81,8 +81,8 @@ function fakeApi() {
       price: '20',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 
+            user: 
           }
       ]
     },
@@ -95,8 +95,8 @@ function fakeApi() {
       price: '50',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Are they comfortable?',
+            user: 'Jess101'
           }
       ]
     },
