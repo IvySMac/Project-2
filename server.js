@@ -53,7 +53,7 @@ function fakeApi() {
       imageSrc: 'womens-green-sweater.jpg',
       title: 'sweater',
       description: 'has a tear.',
-      price: '35',
+      price: '50',
       commentBox: [
         {
           text: 'looks great, still available?',
