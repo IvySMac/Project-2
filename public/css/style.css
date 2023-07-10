@@ -13,19 +13,14 @@ header {
     height: auto;
   }
   
-   /* womens header */
-  header1 {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .image-header1 {
-    text-align: center;
-  }
-  
-  .image-header img1 {
-    width: 100%;
-    height: auto;
+    h1 {
+    background-color: #678f78; 
+    padding: 10px;
+    border-radius: 5px; 
+    text-align: center; 
+    color: #ffffff; 
+    font-size: 30px; 
+    font-weight: bold; 
   }
   
     
@@ -81,35 +76,25 @@ header {
   }
   
   
-   /* mens header */
-  header2 {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .image-header2 {
-    text-align: center;
-  }
-  
-  .image-header img2 {
-    width: 100%;
-    height: auto;
+    h1 {
+    background-color: #678f78; 
+    padding: 10px;
+    border-radius: 5px; 
+    text-align: center; 
+    color: #ffffff; 
+    font-size: 30px; 
+    font-weight: bold; 
   }
   
   
-   /* kids header */
-  header3 {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .image-header3 {
-    text-align: center;
-  }
-  
-  .image-header img3 {
-    width: 100%;
-    height: auto;
+    h1 {
+    background-color: #678f78; 
+    padding: 10px;
+    border-radius: 5px; 
+    text-align: center; 
+    color: #ffffff; 
+    font-size: 30px; 
+    font-weight: bold; 
   }
 
 .chat-messages {
