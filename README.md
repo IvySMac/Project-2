@@ -1,2 +1,10 @@
-# Project-2
-## Hello world
+# Nifty Thrifty 
+
+## Description 
+
+
+
+## Usage 
+
+## Technologies Used
+
