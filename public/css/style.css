@@ -13,19 +13,14 @@ header {
     height: auto;
   }
   
-   /* womens header */
-  header1 {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .image-header1 {
-    text-align: center;
-  }
-  
-  .image-header img1 {
-    width: 100%;
-    height: auto;
+    h1 {
+    background-color: #678f78; 
+    padding: 10px;
+    border-radius: 5px; 
+    text-align: center; 
+    color: #ffffff; 
+    font-size: 30px; 
+    font-weight: bold; 
   }
   
     
@@ -50,7 +45,12 @@ header {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
-    height: 150px
+    height: 600px
+  }
+
+  .resize {
+    width: 300px;
+    height: 300px;
   }
   
   .product-image {
@@ -58,7 +58,7 @@ header {
   }
   .product-image img {
     max-width: 100%;
-    height: auto;
+    height: 300px;
   }
   
   .product-title {
@@ -72,40 +72,52 @@ header {
   }
   .product-price {
     font-weight: bold;
-    color: blue; 
+    color: #b8a37e; 
   }
   
   
-   /* mens header */
-  header2 {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .image-header2 {
-    text-align: center;
-  }
-  
-  .image-header img2 {
-    width: 100%;
-    height: auto;
+    h1 {
+    background-color: #678f78; 
+    padding: 10px;
+    border-radius: 5px; 
+    text-align: center; 
+    color: #ffffff; 
+    font-size: 30px; 
+    font-weight: bold; 
   }
   
   
-   /* kids header */
-  header3 {
-    margin: 0;
-    padding: 0;
+    h1 {
+    background-color: #678f78; 
+    padding: 10px;
+    border-radius: 5px; 
+    text-align: center; 
+    color: #ffffff; 
+    font-size: 30px; 
+    font-weight: bold; 
   }
-  
-  .image-header3 {
-    text-align: center;
-  }
-  
-  .image-header img3 {
-    width: 100%;
-    height: auto;
-  }
+
+.chat-messages {
+  margin-top: 0px;
+  padding: 10px;
+
+}
+
+.chat-input {
+  padding: 10px;
+  width: 250px;
+  background: #b8a37e;
+}
+
+.message-input {
+  width: 150px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.send-button {
+  padding: 5px 10px;
+}
   
   
   /* footer */

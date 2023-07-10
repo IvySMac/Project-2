@@ -2,7 +2,7 @@ const User = require('./User');
 const Product = require('./Products');
 const Thread = require('./Threads');
 const Message  = require('./Messages');
-const Post = require('./post');
+const Post = require('./Post');
 
 
 User.hasMany(Post, {
