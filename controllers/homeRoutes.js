@@ -68,7 +68,7 @@ function fakeApi() {
       commentBox: [
         {
             text: 'Is this still available?',
-            user: 'TS1989'
+            user: 'jess101'
           }
       ]
     },
@@ -81,8 +81,8 @@ function fakeApi() {
       price: '20',
       commentBox: [
         {
-            text: 
-            user: 
+            text: '',
+            user: ''
           }
       ]
     },
@@ -96,7 +96,7 @@ function fakeApi() {
       commentBox: [
         {
             text: 'Are they comfortable?',
-            user: 'Jess101'
+            user: 'TS1989'
           }
       ]
     },
@@ -109,8 +109,8 @@ function fakeApi() {
       price: '45',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Looks great, still available?',
+            user: 'macy89'
           }
       ]
     },
@@ -123,8 +123,8 @@ function fakeApi() {
       price: '15',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: '',
+            user: ''
           }
       ]
     },
@@ -137,8 +137,8 @@ function fakeApi() {
       price: '30',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: '',
+            user: ''
           }
       ]
     }, 
@@ -146,13 +146,13 @@ function fakeApi() {
     {
       isWomens: true,
       imageSrc: 'womens-tan.jpg',
-      title: 'cool shirt',
-      description: 'has a tear.',
+      title: 'Shirt',
+      description: 'Lightly worn.',
       price: '45',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Is this a cover up?',
+            user: 'jen53'
           }
       ]
     },
@@ -164,7 +164,7 @@ function fakeApi() {
       price: '10',
       commentBox: [
         {
-            text: 'looks great, still available?',
+            text: 'Looks great, still available?',
             user: 'coolbro00'
           }
       ]
@@ -178,8 +178,8 @@ function fakeApi() {
       price: '35',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: '',
+            user: ''
           }
       ]
     },
@@ -192,8 +192,8 @@ function fakeApi() {
       price: '20',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Where is it scuffed located?',
+            user: 'Jmaes93'
           }
       ]
     },
@@ -206,8 +206,8 @@ function fakeApi() {
       price: '35',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Is it still available?',
+            user: 'trent00'
           }
       ]
     },
@@ -220,8 +220,8 @@ function fakeApi() {
       price: '15',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: '',
+            user: ''
           }
       ]
     },
@@ -230,12 +230,12 @@ function fakeApi() {
       isMens: true,
       imageSrc: 'mens-green-shirt.jpg',
       title: 'Shirt',
-      description: 'Fun color and good condition.',
+      description: 'Fun color and has a small hole.',
       price: '10',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Where is the hole at?',
+            user: 'joe000'
           }
       ]
     },
@@ -248,8 +248,8 @@ function fakeApi() {
       price: '25',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'What brand are these?',
+            user: 'cooldude00'
           }
       ]
     },
@@ -262,8 +262,8 @@ function fakeApi() {
         price: '30',
         commentBox: [
           {
-              text: 'looks great, still available?',
-              user: 'coolbro00'
+              text: '',
+              user: ''
             }
         ]
       },
@@ -276,8 +276,8 @@ function fakeApi() {
       price: '40',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: '',
+            user: ''
           }
       ]
     },
@@ -291,8 +291,8 @@ function fakeApi() {
       price: '15',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Are the straps adjustable?',
+            user: 'poppy22'
           }
       ]
     },
@@ -305,8 +305,8 @@ function fakeApi() {
       price: '5',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Is this still available?',
+            user: 'Molly32'
           }
       ]
     },
@@ -319,8 +319,8 @@ function fakeApi() {
       price: '20',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: '',
+            user: ''
           }
       ]
     },
@@ -333,8 +333,8 @@ function fakeApi() {
       price: '15',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Are the soft soles?',
+            user: 'kat10'
           }
       ]
     },
@@ -347,8 +347,8 @@ function fakeApi() {
         price: '10',
         commentBox: [
           {
-              text: 'looks great, still available?',
-              user: 'coolbro00'
+              text: 'Are these still for sale?',
+              user: 'zey06'
             }
         ]
       },
@@ -361,8 +361,8 @@ function fakeApi() {
       price: '5',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: '',
+            user: ''
           }
       ]
     },
@@ -375,8 +375,8 @@ function fakeApi() {
       price: '10',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Are they cotton?',
+            user: 'lala29'
           }
       ]
     },
@@ -389,8 +389,8 @@ function fakeApi() {
       price: '15',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: '',
+            user: ''
           }
       ]
     },
@@ -403,8 +403,8 @@ function fakeApi() {
       price: '5',
       commentBox: [
         {
-            text: 'looks great, still available?',
-            user: 'coolbro00'
+            text: 'Do you still have these?',
+            user: 'meg99'
           }
       ]
     }
